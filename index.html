@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/c3d3cabb8b.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-[#0D6EFD0D]">
+        <nav class="flex justify-between lg:px-60 p-5 py-12">
+            <h1 class="text-2xl font-bold">Phone Hunter</h1>
+            <button class="btn btn-primary">Sign Up</button>
+        </nav>
+        <section class="flex flex-col justify-center text-center p-5 items-center gap-6 ">
+            <h1 class="font-bold text-5xl">Apple Iphone 13 Pro Max</h1>
+            <p class="max-w-screen-md text-[#706F6F]">There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by injected humou.</p>
+            <button class="btn btn-primary w-max mt-16 ">Buy Now</button>
+            <img class="" src="./images/Banner.png" alt="">
+        </section>
+    </header>
+    <main class="lg:px-60 p-4  ">
+        <section class="flex flex-col gap-6 justify-center items-center text-center mb-12">
+            <h1 class="text-5xl font-semibold">Search your phone</h1>
+            <div class="form-control">
+                <div class="input-group">
+                    <input id="searchBar" type="text" placeholder="Search Your Phone Here…" class="input lg:w-[752px] input-bordered" />
+                    <button onclick="search()" class="btn w-max px-4  btn-square">
+                        <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                        <p>Search</p>
+                    </button>
+                </div>
+            </div>
+            <div id="errorBox" class="flex flex-col justify-center text-center items-center my-6 gap-5">
+                <i class="text-red-500 fa-solid fa-triangle-exclamation fa-2xl"></i>
+                <p class=" text-red-400"> No Results Found!</p>
+            </div>
+            <div id="loading" class=" flex flex-col justify-center text-center items-center my-6 gap-5">
+                <span class="text-yellow-500 loading loading-infinity loading-lg"></span>
+            </div>
+        </section>
+        <section id="cards" class="flex flex-wrap justify-center items-center gap-5">
+
+            <!-- Here Goes The Mobile Cards  -->
+
+        </section>
+        <div class="w-full text-center my-16">
+            <button id="showbtn" onclick="showAll()" class="btn btn-primary" id="showAll" >Show <span id="all&LessButton">ALL</span></button>
+        </div>
+
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <form method="dialog" class="modal-box">
+                <div class="card h-max px-10 pt-10  bg-base-100 ">
+                    <figure class="px-10 pt-10 bg-[#0D6EFD0D]">
+                        <img src="./images/pngwing 3.png" alt="Mobile" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body">
+                        <h2 id="phoneName" class="card-title">I Phone14 Pro Max</h2>
+                        <p class="text-sm text-[#706F6F]">There are many variations of passages of available, but the majority have
+                            suffered</p>
+                        <h1 class="font-semibold text-base">Storage: <span id="storage" class="font-normal text-[#706F6F]">999</span></h1>
+                        <h1 class="font-semibold text-base">Display Size: <span id="display" class="font-normal text-[#706F6F]">999</span></h1>
+                        <h1 class="font-semibold text-base">Chipset: <span id="chipset" class="font-normal text-[#706F6F]">999</span></h1>
+                        <h1 class="font-semibold text-base">Memory: <span id="memory" class="font-normal text-[#706F6F]">999</span></h1>
+                        <h1 class="font-semibold text-base">Slug: <span id="slug" class="font-normal text-[#706F6F]">999</span></h1>
+                        <h1 class="font-semibold text-base">Release Date: <span id="releaseDate" class="font-normal text-[#706F6F]">999</span></h1>
+                        <h1 class="font-semibold text-base">Brand: <span id="brand" class="font-normal text-[#706F6F]">999</span></h1>
+                        <h1 class="font-semibold text-base">GPS: <span id="gps" class="font-normal text-[#706F6F]">999</span></h1>
+                    </div>
+                </div>
+                <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn bg-red-500 text-white hover:bg-red-400">Close</button>
+                </div>
+            </form>
+        </dialog>
+    </main>
+
+    <script src="./json.js"></script>
+</body>
+
+</html>
